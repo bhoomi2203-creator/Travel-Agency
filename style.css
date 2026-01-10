@@ -1,0 +1,578 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins, Arial;
+}
+
+body{
+  background:#eef5ff;
+}
+
+/* NAVBAR */
+nav{
+  background:#002855;
+  color:white;
+  padding:12px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav a{
+  color:white;
+  margin-left:12px;
+  text-decoration:none;
+  font-size:14px;
+}
+nav a:hover{
+  text-decoration:underline;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:40px;
+  background:linear-gradient(120deg,#0077b6,#00b4d8);
+  color:white;
+}
+.hero input{
+  margin-top:14px;
+  padding:10px;
+  width:40%;
+  border-radius:20px;
+  border:none;
+}
+
+/* MAIN LAYOUT */
+.main{
+  display:flex;
+}
+
+/* LEFT SIDEBAR */
+.sidebar{
+  width:25%;
+  padding:10px;
+}
+
+.card{
+  background:white;
+  padding:12px;
+  margin-bottom:12px;
+  border-radius:10px;
+  box-shadow:0 0 8px rgba(0,0,0,.1);
+}
+
+/* RIGHT CONTENT */
+.content{
+  width:75%;
+  padding:10px;
+}
+
+#map{
+  height:340px;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+
+button{
+  padding:12px 18px;
+  border:none;
+  cursor:pointer;
+  background:#023e8a;
+  color:white;
+  border-radius:30px;
+  font-size:15px;
+  transition:0.25s ease;
+  width:100%;
+  margin-top:6px;
+  box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+/* hover feedback */
+button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 14px rgba(0,0,0,.2);
+}
+
+/* click feedback */
+button:active{
+  transform:scale(.95);
+}
+
+/* accessibility */
+button:focus{
+  outline:3px solid #48cae4;
+}
+
+/* mobile friendly tap size */
+@media(max-width:768px){
+  button{
+    font-size:16px;
+    padding:14px 22px;
+  }
+}
+
+/* GALLERY */
+.gallery{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.gallery img{
+  width:140px;
+  height:100px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* POPULAR PLACES */
+.popular{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.popular .place{
+  background:white;
+  width:170px;
+  padding:10px;
+  border-radius:12px;
+  box-shadow:0 0 6px rgba(0,0,0,.1);
+}
+
+/* RESPONSIVE LAYOUT */
+@media(max-width:900px){
+  .main{
+    flex-direction:column;
+  }
+
+  .sidebar, .content{
+    width:100%;
+  }
+
+  .hero input{
+    width:85%;
+  }
+
+  nav{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+button{
+  position:relative;
+  overflow:hidden;
+}
+
+.ripple{
+  position:absolute;
+  width:100px;
+  height:100px;
+  background:rgba(255,255,255,.4);
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  animation:ripple .4s linear;
+  top:50%;
+  left:50%;
+}
+
+@keyframes ripple{
+  from{opacity:1; transform:scale(0);}
+  to{opacity:0; transform:scale(2);}
+}
+
+
+/* NAVBAR */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 30px;
+  background:#002855;
+  color:white;
+}
+
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap:15px;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.nav-links a:hover{
+  text-decoration:underline;
+}
+
+/* HERO */
+.hero{
+  height:70vh;
+  background:url('https://images.unsplash.com/photo-1508264165352-258859e62245?w=1200') center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero-content{
+  text-align:center;
+  background:rgba(0,0,0,0.55);
+  color:white;
+  padding:30px;
+  border-radius:12px;
+}
+
+.search-box{
+  margin-top:10px;
+  width:60%;
+  padding:10px;
+  border-radius:20px;
+  border:none;
+  outline:none;
+}
+
+/* BUTTON */
+.primary-btn{
+  margin-top:12px;
+  padding:10px 18px;
+  border:none;
+  background:#00b4d8;
+  color:white;
+  border-radius:20px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.primary-btn:hover{
+  background:#0096c7;
+  transform:scale(1.05);
+}
+
+/* FEATURES */
+.features-section{
+  text-align:center;
+  padding:30px;
+}
+
+.features{
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+  justify-content:center;
+}
+
+.feature-card{
+  background:white;
+  padding:14px;
+  width:200px;
+  border-radius:12px;
+  box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+/* TESTIMONIALS */
+.testimonials{
+  background:#f7f9ff;
+  padding:30px;
+  text-align:center;
+}
+
+.reviews{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.review-card{
+  background:white;
+  padding:14px;
+  width:220px;
+  border-radius:12px;
+  box-shadow:0 0 8px rgba(0,0,0,.1);
+}
+
+/* FOOTER */
+footer{
+  background:#001d3d;
+  color:white;
+  text-align:center;
+  padding:12px;
+  margin-top:10px;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero-content{
+    width:90%;
+  }
+
+  .search-box{
+    width:85%;
+  }
+}
+
+/* PAGE HEADER */
+.page-header{
+  text-align:center;
+  padding:25px;
+  background:#f1f6ff;
+}
+
+.page-header input{
+  width:60%;
+  padding:10px;
+  border-radius:20px;
+  border:1px solid #aaa;
+  margin-top:10px;
+}
+
+/* FILTER BUTTONS */
+.filters{
+  text-align:center;
+  margin-top:10px;
+}
+
+.filter-btn{
+  margin:4px;
+  padding:8px 14px;
+  border:none;
+  border-radius:20px;
+  background:#0077b6;
+  color:white;
+  cursor:pointer;
+}
+.filter-btn:hover{
+  background:#00b4d8;
+}
+
+/* GRID OF CARDS */
+.grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+  padding:15px;
+}
+
+.dest-card{
+  width:230px;
+  background:white;
+  border-radius:12px;
+  box-shadow:0 0 8px rgba(0,0,0,.1);
+  padding:10px;
+  text-align:center;
+  transition:.3s;
+}
+
+.dest-card:hover{
+  transform:scale(1.03);
+}
+
+.dest-card img{
+  width:100%;
+  height:130px;
+  border-radius:10px;
+  object-fit:cover;
+}
+
+// ================= MAP ==================
+let map = L.map("map").setView([20.59, 78.96], 5);
+
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  maxZoom: 18,
+}).addTo(map);
+
+let userMarker;
+
+// ================ LOCATION =================
+document.getElementById("locBtn").onclick = () => {
+  navigator.geolocation.getCurrentPosition(success, () => alert("Location access denied"));
+};
+
+function success(pos){
+  let lat = pos.coords.latitude;
+  let lng = pos.coords.longitude;
+
+  if(userMarker) map.removeLayer(userMarker);
+
+  userMarker = L.marker([lat,lng]).addTo(map).bindPopup("You are here");
+  document.getElementById("userLocation").innerText = `Lat ${lat.toFixed(2)}, Lng ${lng.toFixed(2)}`;
+
+  map.setView([lat,lng],13);
+
+  getWeather(lat,lng);
+}
+
+// ================= WEATHER API =================
+async function getWeather(lat,lng){
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=YOUR_API_KEY_HERE&units=metric`;
+
+  let res = await fetch(url);
+  let d = await res.json();
+
+  document.getElementById("weather").innerText =
+    `${d.main.temp}°C | ${d.weather[0].description}`;
+}
+
+// ================= SPOTS DATABASE =================
+const spots=[
+  {name:"Taj Mahal",lat:27.175,lng:78.042,type:"historical"},
+  {name:"Hawa Mahal",lat:26.923,lng:75.826,type:"historical"},
+  {name:"Goa Beach",lat:15.299,lng:73.912,type:"adventure"},
+  {name:"Manali Hills",lat:32.239,lng:77.188,type:"nature"},
+  {name:"Ladakh Valley",lat:34.15,lng:77.57,type:"adventure"},
+  {name:"Chandni Chowk",lat:28.656,lng:77.230,type:"shopping"},
+];
+
+// ================== SUGGESTIONS ==================
+document.getElementById("suggestBtn").onclick = () => {
+  let interest=document.getElementById("interest").value;
+
+  let result = spots.filter(s=>s.type===interest);
+
+  result.forEach(p=>{
+    L.marker([p.lat,p.lng]).addTo(map).bindPopup(p.name);
+  });
+
+  fillItinerary(result);
+
+  speak(result.length + " places suggested for " + interest);
+};
+
+// ================= ITINERARY ==================
+function fillItinerary(list){
+  let ul=document.getElementById("itineraryList");
+  ul.innerHTML="";
+
+  list.forEach(p=>{
+    let li=document.createElement("li");
+    li.innerText=p.name;
+    ul.appendChild(li);
+  });
+}
+
+// save trip
+document.getElementById("saveTrip").onclick = ()=>{
+  localStorage.setItem("savedTrip",document.getElementById("itineraryList").innerText);
+  alert("Trip saved locally!");
+};
+
+// load saved trip
+document.getElementById("loadTrip").onclick = ()=>{
+  document.getElementById("itineraryList").innerText = localStorage.getItem("savedTrip") || "No saved trips";
+};
+
+// ================= VOICE ==================
+function speak(text){
+  let s = new SpeechSynthesisUtterance(text);
+  s.lang="en";
+  window.speechSynthesis.speak(s);
+}
+
+document.getElementById("voiceGuide").onclick = ()=>{
+  speak("Welcome to your trip planner. You can detect location, view weather, and plan your journey.");
+};
+
+/* TRIP PLANNER LAYOUT */
+.planner-layout{
+  display:flex;
+  min-height:70vh;
+}
+
+.sidebar{
+  width:28%;
+  padding:10px;
+}
+
+.content{
+  width:72%;
+  padding:10px;
+}
+
+#map{
+  height:65vh;
+  border-radius:12px;
+}
+
+/* cards already defined previously — reused */
+
+/* ABOUT SECTION */
+.about-section{
+  padding:25px;
+  text-align:center;
+}
+
+.about-cards{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+
+.about-card{
+  background:white;
+  width:220px;
+  padding:12px;
+  border-radius:12px;
+  box-shadow:0 0 8px rgba(0,0,0,.1);
+}
+
+/* CONTACT SECTION */
+.contact-section{
+  padding:25px;
+  background:#f7f9ff;
+  text-align:center;
+}
+
+.contact-box{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+
+/* form */
+#contactForm{
+  display:flex;
+  flex-direction:column;
+  width:260px;
+  gap:8px;
+}
+
+#contactForm input,
+#contactForm textarea{
+  padding:8px;
+  border-radius:8px;
+  border:1px solid #aaa;
+}
+
+#contactForm button{
+  padding:10px;
+  border:none;
+  border-radius:20px;
+  background:#0077b6;
+  color:white;
+  cursor:pointer;
+}
+
+/* info card */
+.contact-info{
+  width:260px;
+  background:white;
+  padding:12px;
+  border-radius:12px;
+  box-shadow:0 0 8px rgba(0,0,0,.1);
+}

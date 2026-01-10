@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Trip Planner</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Leaflet Map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">🌍 Smart Tourist Guide</div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="discover.html">Discover</a></li>
+    <li><a href="planner.html">Planner</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <h1>Trip Planner</h1>
+  <p>Track your location, view map, plan itinerary & get guidance</p>
+</section>
+
+<div class="planner-layout">
+
+  <!-- LEFT SIDEBAR -->
+  <div class="sidebar">
+
+    <div class="card">
+      <h3>📍 Your Location</h3>
+      <p id="userLocation">Detecting...</p>
+      <button id="locBtn">Detect Location</button>
+    </div>
+
+    <div class="card">
+      <h3>🌦 Weather</h3>
+      <p id="weather">--</p>
+    </div>
+
+    <div class="card">
+      <h3>🎯 Select Interest</h3>
+      <select id="interest">
+        <option value="historical">Historical</option>
+        <option value="nature">Nature</option>
+        <option value="shopping">Shopping</option>
+        <option value="adventure">Adventure</option>
+      </select>
+      <button id="suggestBtn">Suggest Places</button>
+    </div>
+
+    <div class="card">
+      <h3>📝 Your Itinerary</h3>
+      <ul id="itineraryList"></ul>
+      <button id="saveTrip">💾 Save Trip</button>
+      <button id="loadTrip">📂 Load Saved Trip</button>
+    </div>
+
+    <div class="card">
+      <h3>🔊 Voice Guide</h3>
+      <button id="voiceGuide">Start Voice Guide</button>
+    </div>
+
+  </div>
+
+  <!-- RIGHT CONTENT AREA -->
+  <div class="content">
+    <div id="map"></div>
+  </div>
+
+</div>
+
+<script src="planner.js"></script>
+
+</body>
+</html>

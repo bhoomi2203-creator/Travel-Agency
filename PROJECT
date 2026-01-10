@@ -1,0 +1,7 @@
+tourist-guide-website/
+│── index.html          (Home)
+│── discover.html       (Destinations)
+│── planner.html        (Trip planner + map)
+│── contact.html        (Contact/About)
+│── style.css
+│── app.js

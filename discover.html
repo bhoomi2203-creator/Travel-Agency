@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Discover Destinations</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">🌍 Smart Tourist Guide</div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="discover.html">Discover</a></li>
+    <li><a href="planner.html">Planner</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HEADER -->
+<section class="page-header">
+  <h1>Discover Popular Tourist Places</h1>
+  <p>Browse top attractions across India</p>
+
+  <input type="text" id="searchBox" placeholder="🔍 Search city or place">
+</section>
+
+<!-- CATEGORY FILTER -->
+<div class="filters">
+  <button class="filter-btn" data-type="all">All</button>
+  <button class="filter-btn" data-type="historical">🏛 Historical</button>
+  <button class="filter-btn" data-type="nature">🌳 Nature</button>
+  <button class="filter-btn" data-type="adventure">⛰ Adventure</button>
+  <button class="filter-btn" data-type="shopping">🛍 Shopping</button>
+</div>
+
+<!-- DESTINATION LIST -->
+<div class="grid" id="destGrid"></div>
+
+<script>
+// ====== DESTINATION DATABASE ======
+const destinations = [
+  {name:"Taj Mahal", city:"Agra", type:"historical", rating:5, img:"https://picsum.photos/300/200?1"},
+  {name:"Hawa Mahal", city:"Jaipur", type:"historical", rating:4, img:"https://picsum.photos/300/200?2"},
+  {name:"Goa Beaches", city:"Goa", type:"adventure", rating:5, img:"https://picsum.photos/300/200?3"},
+  {name:"Manali Hills", city:"Manali", type:"nature", rating:4, img:"https://picsum.photos/300/200?4"},
+  {name:"Red Fort", city:"Delhi", type:"historical", rating
